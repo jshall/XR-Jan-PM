@@ -15,11 +15,12 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var Speed = Time.deltaTime * WalkingSpeed;
+        var walk = new Vector3(0, 0, Time.deltaTime * WalkingSpeed);
         if (Input.GetKey(Dash))
-            Speed *= 2;
-        transform.Translate(0, 0, Input.GetAxis("Vertical") * Speed);
-        transform.Rotate(0, RotationSpeed * Time.deltaTime * Input.GetAxis("Horizontal"), 0);
+            walk *= 2;
+        var r = gameObject.GetComponent<Rigidbody>();
+        r.AddRelativeForce(walk * Input.GetAxis("Vertical"), ForceMode.Acceleration);
+        r.AddTorque(0, RotationSpeed * Time.deltaTime * Input.GetAxis("Horizontal"), 0, ForceMode.Acceleration);
     }
 
 }
