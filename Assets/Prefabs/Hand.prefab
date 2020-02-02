@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 621066933038145622}
   - component: {fileID: 3622423889457390057}
   m_Layer: 0
-  m_Name: Capsule (10)
+  m_Name: ring tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 4779441862684655845}
   - component: {fileID: 2558407993069661286}
   m_Layer: 0
-  m_Name: Capsule (3)
+  m_Name: pinky base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 7945565782305292889}
   - component: {fileID: 8280476471539667643}
   m_Layer: 0
-  m_Name: Capsule (8)
+  m_Name: pointer tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 1749265452628344105}
   - component: {fileID: 8315317637835329472}
   m_Layer: 0
-  m_Name: Capsule (5)
+  m_Name: middle middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -387,7 +387,7 @@ GameObject:
   - component: {fileID: 2772755653710658458}
   - component: {fileID: 2772755653710658463}
   - component: {fileID: 2772755653710658456}
-  - component: {fileID: 2772755653710658457}
+  - component: {fileID: 8936341129030381564}
   m_Layer: 0
   m_Name: hand
   m_TagString: Untagged
@@ -470,8 +470,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &2772755653710658457
-SphereCollider:
+--- !u!65 &8936341129030381564
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -481,7 +481,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 0.91, y: 1.68, z: 0.7}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3349913297806022172
 GameObject:
@@ -496,7 +496,7 @@ GameObject:
   - component: {fileID: 1056220597956160491}
   - component: {fileID: 5432104653425163692}
   m_Layer: 0
-  m_Name: Capsule (1)
+  m_Name: middle base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -590,7 +590,7 @@ GameObject:
   - component: {fileID: 8305979796961475630}
   - component: {fileID: 6396007723274055905}
   m_Layer: 0
-  m_Name: Capsule (7)
+  m_Name: pinky middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -684,7 +684,7 @@ GameObject:
   - component: {fileID: 111169723973162375}
   - component: {fileID: 5236329526593554182}
   m_Layer: 0
-  m_Name: Capsule (12)
+  m_Name: thumb base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -778,7 +778,7 @@ GameObject:
   - component: {fileID: 2763101932401018515}
   - component: {fileID: 2093188215899810574}
   m_Layer: 0
-  m_Name: Capsule (11)
+  m_Name: pinky tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -872,7 +872,7 @@ GameObject:
   - component: {fileID: 4269760486317557277}
   - component: {fileID: 3878564035553532057}
   m_Layer: 0
-  m_Name: Capsule (9)
+  m_Name: middle tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -966,7 +966,7 @@ GameObject:
   - component: {fileID: 6272829791106568654}
   - component: {fileID: 7619334760411762208}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: pointer base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1060,7 +1060,7 @@ GameObject:
   - component: {fileID: 3919957770796545409}
   - component: {fileID: 5370212646482691281}
   m_Layer: 0
-  m_Name: Capsule (4)
+  m_Name: pointer middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1154,7 +1154,7 @@ GameObject:
   - component: {fileID: 1758791861996307249}
   - component: {fileID: 5319558472984504475}
   m_Layer: 0
-  m_Name: Capsule (6)
+  m_Name: ring middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1248,7 +1248,7 @@ GameObject:
   - component: {fileID: 4618625474713410020}
   - component: {fileID: 2696015901315454999}
   m_Layer: 0
-  m_Name: Capsule (2)
+  m_Name: ring base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1342,7 +1342,7 @@ GameObject:
   - component: {fileID: 737093206864386938}
   - component: {fileID: 4067172700287266058}
   m_Layer: 0
-  m_Name: Capsule (13)
+  m_Name: thumb tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
