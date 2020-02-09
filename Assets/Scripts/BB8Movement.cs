@@ -57,7 +57,6 @@ public class BB8Movement : MonoBehaviour
         input *= RotationSpeed * (Input.GetKey(DashKey) ? DashMultiplier : 1) * Time.deltaTime;
         input = Head.transform.rotation * input;
         Body.AddTorque(input, ForceMode.Impulse);
-        Debug.Log($"input: {input}");
     }
 
     void OnCollisionStay(Collision collision)
