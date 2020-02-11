@@ -35,8 +35,14 @@ public class Chase : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.impulse.magnitude > 15)
+        if (!dead && collision.impulse.magnitude > 15)
         {
+            var collider = GetComponent<SphereCollider>();
+            if (collider != null)
+            {
+                collider.center = new Vector3(0, 1.4f, 0);
+                collider.radius = 1.5f;
+            }
             anim.CrossFade("Death");
             dead = true;
         }
