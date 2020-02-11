@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using UnityEngine;
 
 public class Monster : MonoBehaviour
@@ -11,13 +9,11 @@ public class Monster : MonoBehaviour
     private Animation anim;
     private bool dead = false;
 
-    // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animation>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (dead) return;

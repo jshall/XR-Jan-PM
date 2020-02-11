@@ -6,13 +6,6 @@ public class PlayerMovement : MonoBehaviour
     public float RotationSpeed = 100;
     public KeyCode Dash = KeyCode.LeftShift;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         var walk = new Vector3(0, 0, Time.deltaTime * WalkingSpeed);

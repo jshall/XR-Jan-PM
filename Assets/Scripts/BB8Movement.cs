@@ -17,7 +17,6 @@ public class BB8Movement : MonoBehaviour
     public KeyCode BrakeKey = KeyCode.R;
     public KeyCode LightKey = KeyCode.F;
 
-    // Start is called before the first frame update
     void Start()
     {
         Cursor.visible = false;
@@ -30,7 +29,6 @@ public class BB8Movement : MonoBehaviour
         Body.maxAngularVelocity = float.PositiveInfinity;
     }
 
-    // Update is called once per frame1
     void Update()
     {
         // Toggle brake
