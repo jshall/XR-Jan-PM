@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
-public class Chase : MonoBehaviour
+public class Monster : MonoBehaviour
 {
-    public GameObject Target;
+    public Transform Target;
     public float Speed = 1f;
 
     private Animation anim;
@@ -21,10 +22,25 @@ public class Chase : MonoBehaviour
     {
         if (dead) return;
 
-        transform.LookAt(Target.transform);
-        if (Vector3.Distance(transform.position, Target.transform.position) < 1.6)
+        // look for food
+        var target = Target;
+        var closest = Vector3.Distance(transform.position, target.position);
+        foreach (var obj in from o in Physics.OverlapSphere(transform.position, 30)
+                            where o.tag == "Food"
+                            select o.transform)
+        {
+            var d = Vector3.Distance(transform.position, obj.position);
+            if (closest < d) continue;
+            target = obj;
+            closest = d;
+        }
+
+        transform.LookAt(target);
+        if (Vector3.Distance(transform.position, target.position) < 1.6)
         {
             anim.CrossFade("Attack");
+            if (target.tag == "Food")
+                Destroy(target.gameObject, 0.5f);
         }
         else
         {

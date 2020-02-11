@@ -236,7 +236,7 @@ PrefabInstance:
     - target: {fileID: 893723119, guid: 8edb2fa3dc2112246b53357be701f37b, type: 3}
       propertyPath: Target
       value: 
-      objectReference: {fileID: 1925357996}
+      objectReference: {fileID: 1925357999}
     - target: {fileID: 1382258774799692, guid: 8edb2fa3dc2112246b53357be701f37b, type: 3}
       propertyPath: m_Name
       value: MushroomMonster (6)
@@ -395,7 +395,7 @@ PrefabInstance:
     - target: {fileID: 893723119, guid: 8edb2fa3dc2112246b53357be701f37b, type: 3}
       propertyPath: Target
       value: 
-      objectReference: {fileID: 1925357996}
+      objectReference: {fileID: 1925357999}
     - target: {fileID: 1382258774799692, guid: 8edb2fa3dc2112246b53357be701f37b, type: 3}
       propertyPath: m_Name
       value: MushroomMonster
@@ -446,6 +446,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8edb2fa3dc2112246b53357be701f37b, type: 3}
+--- !u!1 &606495815
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 606495816}
+  - component: {fileID: 606495817}
+  m_Layer: 0
+  m_Name: Gun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &606495816
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606495815}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.201, z: 0.917}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1742321210}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &606495817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606495815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f67060a63e85da40b3086e6ec770159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bullet: {fileID: 8530320694466028085, guid: ade41966f09239144abc77ba9c44eb19, type: 3}
+  Speed: 200
 --- !u!1001 &1550809865
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -456,7 +501,7 @@ PrefabInstance:
     - target: {fileID: 893723119, guid: 8edb2fa3dc2112246b53357be701f37b, type: 3}
       propertyPath: Target
       value: 
-      objectReference: {fileID: 1925357996}
+      objectReference: {fileID: 1925357999}
     - target: {fileID: 1382258774799692, guid: 8edb2fa3dc2112246b53357be701f37b, type: 3}
       propertyPath: m_Name
       value: MushroomMonster (5)
@@ -522,7 +567,7 @@ PrefabInstance:
     - target: {fileID: 893723119, guid: 8edb2fa3dc2112246b53357be701f37b, type: 3}
       propertyPath: Target
       value: 
-      objectReference: {fileID: 1925357996}
+      objectReference: {fileID: 1925357999}
     - target: {fileID: 1382258774799692, guid: 8edb2fa3dc2112246b53357be701f37b, type: 3}
       propertyPath: m_Name
       value: MushroomMonster (8)
@@ -583,7 +628,7 @@ PrefabInstance:
     - target: {fileID: 893723119, guid: 8edb2fa3dc2112246b53357be701f37b, type: 3}
       propertyPath: Target
       value: 
-      objectReference: {fileID: 1925357996}
+      objectReference: {fileID: 1925357999}
     - target: {fileID: 1382258774799692, guid: 8edb2fa3dc2112246b53357be701f37b, type: 3}
       propertyPath: m_Name
       value: MushroomMonster (2)
@@ -639,6 +684,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 233702e70a3d69942a1b79db9766052e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8edb2fa3dc2112246b53357be701f37b, type: 3}
+--- !u!4 &1742321210 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4640121380966748238, guid: 79c15043cb6c73b418734d9b95d6fcca,
+    type: 3}
+  m_PrefabInstance: {fileID: 4640121381841565622}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1784760252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -649,7 +700,7 @@ PrefabInstance:
     - target: {fileID: 893723119, guid: 8edb2fa3dc2112246b53357be701f37b, type: 3}
       propertyPath: Target
       value: 
-      objectReference: {fileID: 1925357996}
+      objectReference: {fileID: 1925357999}
     - target: {fileID: 1382258774799692, guid: 8edb2fa3dc2112246b53357be701f37b, type: 3}
       propertyPath: m_Name
       value: MushroomMonster (3)
@@ -715,7 +766,7 @@ PrefabInstance:
     - target: {fileID: 893723119, guid: 8edb2fa3dc2112246b53357be701f37b, type: 3}
       propertyPath: Target
       value: 
-      objectReference: {fileID: 1925357996}
+      objectReference: {fileID: 1925357999}
     - target: {fileID: 1382258774799692, guid: 8edb2fa3dc2112246b53357be701f37b, type: 3}
       propertyPath: m_Name
       value: MushroomMonster (4)
@@ -781,7 +832,7 @@ PrefabInstance:
     - target: {fileID: 893723119, guid: 8edb2fa3dc2112246b53357be701f37b, type: 3}
       propertyPath: Target
       value: 
-      objectReference: {fileID: 1925357996}
+      objectReference: {fileID: 1925357999}
     - target: {fileID: 1382258774799692, guid: 8edb2fa3dc2112246b53357be701f37b, type: 3}
       propertyPath: m_Name
       value: MushroomMonster (1)
@@ -868,9 +919,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8edb2fa3dc2112246b53357be701f37b, type: 3}
---- !u!1 &1925357996 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4640121380958319977, guid: 79c15043cb6c73b418734d9b95d6fcca,
+--- !u!4 &1925357999 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4640121380958319959, guid: 79c15043cb6c73b418734d9b95d6fcca,
     type: 3}
   m_PrefabInstance: {fileID: 4640121381841565622}
   m_PrefabAsset: {fileID: 0}
@@ -884,7 +935,7 @@ PrefabInstance:
     - target: {fileID: 893723119, guid: 8edb2fa3dc2112246b53357be701f37b, type: 3}
       propertyPath: Target
       value: 
-      objectReference: {fileID: 1925357996}
+      objectReference: {fileID: 1925357999}
     - target: {fileID: 1382258774799692, guid: 8edb2fa3dc2112246b53357be701f37b, type: 3}
       propertyPath: m_Name
       value: MushroomMonster (9)
