@@ -1,0 +1,17 @@
+{
+    "files.associations": {
+        "*.anim": "yaml",
+        "*.asset": "yaml",
+        "*.controller": "yaml",
+        "*.dwlt": "yaml",
+        "*.flare": "yaml",
+        "*.mat": "yaml",
+        "*.meta": "yaml",
+        "*.mixer": "yaml",
+        "*.terrainlayer": "yaml",
+        "*.physicMaterial": "yaml",
+        "*.physicsMaterial2D": "yaml",
+        "*.unity": "yaml",
+        "*.prefab": "yaml"
+    }
+}
