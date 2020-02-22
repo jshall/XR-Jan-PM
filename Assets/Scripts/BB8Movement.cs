@@ -27,6 +27,7 @@ public class BB8Movement : MonoBehaviour
         Camera = Head.GetComponentInChildren<Camera>();
 
         Body.maxAngularVelocity = float.PositiveInfinity;
+        Player.Reset();
     }
 
     void Update()

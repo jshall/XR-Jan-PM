@@ -8,6 +8,7 @@ public class Monster : MonoBehaviour
     public float Speed = 1f;
 
     private Animator anim;
+    private Rigidbody body;
 
     private bool Running
     {
@@ -42,6 +43,7 @@ public class Monster : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        body = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -68,7 +70,7 @@ public class Monster : MonoBehaviour
             if (target.tag == "Food")
                 Destroy(target.gameObject, 0.5f);
             else
-                Player.Attack(1 * Time.deltaTime);
+                Player.Hit(1 * Time.deltaTime);
         }
         else
         {
