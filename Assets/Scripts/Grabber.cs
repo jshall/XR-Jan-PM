@@ -16,12 +16,14 @@ public class Grabber : MonoBehaviour
     {
         if (other is TerrainCollider)
             return;
-        touching.Add(other.gameObject);
+        if (Select(other) is GameObject obj)
+            touching.Add(obj);
     }
 
     void OnTriggerExit(Collider other)
     {
-        touching.Remove(other.gameObject);
+        if (Select(other) is GameObject obj)
+            touching.Remove(obj);
     }
 
     void Update()
@@ -33,6 +35,9 @@ public class Grabber : MonoBehaviour
         if (Input.GetKeyUp(GrabKey))
             Release();
     }
+
+    private GameObject Select(Collider collider)
+        => collider.attachedRigidbody?.gameObject;
 
     private void Grab()
     {

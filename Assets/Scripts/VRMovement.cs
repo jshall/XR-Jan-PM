@@ -2,6 +2,7 @@
 
 public class VRMovement : MonoBehaviour
 {
+    public float Speed = 8;
     private Camera Camera;
 
     void Start()
@@ -14,12 +15,10 @@ public class VRMovement : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector3.right * Input.GetAxis("Horizontal") * Time.deltaTime);
-        transform.Translate(Vector3.forward * Input.GetAxis("Vertical") * Time.deltaTime);
-        if (Input.GetKey(KeyCode.Space))
-            transform.Translate(Vector3.up * Time.deltaTime);
-        if (Input.GetKey(KeyCode.LeftShift))
-            transform.Translate(Vector3.down * Time.deltaTime);
+        transform.Translate(Vector3.right * Input.GetAxis("Horizontal") * Time.deltaTime * Speed);
+        transform.Translate(Vector3.forward * Input.GetAxis("Vertical") * Time.deltaTime * Speed);
+        if (Input.GetKey(KeyCode.Space)) transform.Translate(Vector3.up * Time.deltaTime);
+        if (Input.GetKey(KeyCode.LeftShift)) transform.Translate(Vector3.down * Time.deltaTime);
 
         // Move head and camera
         transform.Rotate(0, Input.GetAxis("Mouse X"), 0);
