@@ -9,6 +9,9 @@ public class Grabber : MonoBehaviour
     public List<GameObject> touching = new List<GameObject>();
     public List<GameObject> holding = new List<GameObject>();
 
+    private Vector3 lastPosition;
+    private Vector3 velocity;
+
     void OnTriggerEnter(Collider other)
     {
         if (other is TerrainCollider)
@@ -23,6 +26,8 @@ public class Grabber : MonoBehaviour
 
     void Update()
     {
+        velocity = (transform.position - lastPosition) / Time.deltaTime;
+        lastPosition = transform.position;
         if (Input.GetKeyDown(GrabKey))
             Grab();
         if (Input.GetKeyUp(GrabKey))
@@ -52,6 +57,7 @@ public class Grabber : MonoBehaviour
             {
                 r.useGravity = true;
                 r.isKinematic = false;
+                r.velocity = velocity;
             }
         }
         holding.Clear();
