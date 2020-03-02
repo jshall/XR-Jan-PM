@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ARFoundation.unity
     guid: fc3356df36bbe1a4381e4e3ee6642111
+  - enabled: 1
+    path: Assets/Scenes/Vuforia.unity
+    guid: e5de786af3c60384f8573fad26ced3d3
   m_configObjects: {}
