@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class HandAnimator : MonoBehaviour
 {
-    public KeyCode GrabKey = KeyCode.Mouse0;
     private Animator Anim;
+    private VRInput controller;
 
     void Start()
     {
         Anim = GetComponentInChildren<Animator>();
+        controller = GetComponentInChildren<VRInput>();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-            Anim.SetBool("IsClosed", true);
-        if (Input.GetKeyUp(KeyCode.Mouse0))
-            Anim.SetBool("IsClosed", false);
+        if (controller && Anim)
+            Anim.Play("FistClosing", 0, controller.gripValue);
     }
 }
