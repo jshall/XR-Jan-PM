@@ -1,16 +1,23 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Grabber : MonoBehaviour
 {
-    public KeyCode GrabKey = KeyCode.Mouse0;
     public List<GameObject> touching = new List<GameObject>();
     public List<GameObject> holding = new List<GameObject>();
 
-    private Vector3 lastPosition;
-    private Vector3 velocity;
+    private VRInput controller;
+    private FixedJoint joint;
+
+    void Awake()
+    {
+        if (TryGetComponent(typeof(FixedJoint), out var c))
+            joint = (FixedJoint)c;
+        controller = GetComponent<VRInput>();
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -28,18 +35,24 @@ public class Grabber : MonoBehaviour
 
     void Update()
     {
-        velocity = (transform.position - lastPosition) / Time.deltaTime;
-        lastPosition = transform.position;
-        if (Input.GetKeyDown(GrabKey))
-            Grab();
-        if (Input.GetKeyUp(GrabKey))
-            Release();
+        if (joint)
+        {
+            if (touching.Any())
+                GrabWithJoint();
+        }
+        else
+        {
+            if (controller.gripValue > 0.8 && touching.Except(holding).Any())
+                GrabWithParenting();
+            else if (holding.Any())
+                ReleaseWithParenting();
+        }
     }
 
     private GameObject Select(Collider collider)
         => collider.attachedRigidbody?.gameObject;
 
-    private void Grab()
+    private void GrabWithParenting()
     {
         foreach (var obj in touching)
         {
@@ -53,7 +66,7 @@ public class Grabber : MonoBehaviour
         }
     }
 
-    private void Release()
+    private void ReleaseWithParenting()
     {
         foreach (var obj in holding)
         {
@@ -62,9 +75,21 @@ public class Grabber : MonoBehaviour
             {
                 r.useGravity = true;
                 r.isKinematic = false;
-                r.velocity = velocity;
+                r.velocity = controller.velocity;
             }
         }
         holding.Clear();
+    }
+
+    private void GrabWithJoint()
+    {
+        foreach (var obj in touching)
+        {
+            var body = obj.GetComponent<Rigidbody>();
+            if (joint.connectedBody == null)
+                joint.connectedBody = body;
+            if (joint.connectedBody == body)
+                joint.breakForce = joint.breakTorque = controller.gripValue * controller.maxForce;
+        }
     }
 }
