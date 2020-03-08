@@ -10,7 +10,7 @@ public class HandAnimator : MonoBehaviour
     void Start()
     {
         Anim = GetComponentInChildren<Animator>();
-        controller = GetComponentInChildren<VRInput>();
+        controller = GetComponent<VRInput>();
     }
 
     void Update()
