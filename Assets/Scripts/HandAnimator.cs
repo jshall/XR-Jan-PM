@@ -5,12 +5,12 @@ using UnityEngine;
 public class HandAnimator : MonoBehaviour
 {
     private Animator Anim;
-    private VRInput controller;
+    private VRController controller;
 
-    void Start()
+    void Awake()
     {
         Anim = GetComponentInChildren<Animator>();
-        controller = GetComponent<VRInput>();
+        controller = GetComponent<VRController>();
     }
 
     void Update()

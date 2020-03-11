@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1879969651801518172}
   - component: {fileID: 4800248129420565421}
   - component: {fileID: 1808028896349399765}
+  - component: {fileID: 2765270572580961989}
   m_Layer: 0
   m_Name: RHand
   m_TagString: Untagged
@@ -80,10 +81,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLeftHand: 0
-  gripValue: 0
-  triggerValue: 0
   velocity: {x: 0, y: 0, z: 0}
-  maxForce: 100
+  gripForce: 100
+  VRInput: {fileID: 0}
 --- !u!114 &4800248129420565421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,6 +110,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   touching: []
   holding: []
+--- !u!114 &2765270572580961989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82048802774682001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c999a53711d40674b89b72f745b335e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rig: {fileID: 0}
 --- !u!1 &2010557239091614480
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2010557239091614482}
   - component: {fileID: 2010557239091614483}
+  - component: {fileID: 9221342526357909261}
   m_Layer: 0
   m_Name: VR Rig
   m_TagString: Untagged
@@ -157,6 +171,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 8
+--- !u!114 &9221342526357909261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010557239091614480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ad2985777a163b4486e3a90bf81a82a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftController: {fileID: 0}
+  RightController: {fileID: 0}
 --- !u!1 &2010557239794472162
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,6 +273,7 @@ GameObject:
   - component: {fileID: 393349490184364259}
   - component: {fileID: 8616450535369860578}
   - component: {fileID: 6239431041805088762}
+  - component: {fileID: 6163057336418108329}
   m_Layer: 0
   m_Name: LHand
   m_TagString: Untagged
@@ -311,10 +340,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLeftHand: 1
-  gripValue: 0
-  triggerValue: 0
   velocity: {x: 0, y: 0, z: 0}
-  maxForce: 100
+  gripForce: 100
+  VRInput: {fileID: 0}
 --- !u!114 &8616450535369860578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,6 +369,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   touching: []
   holding: []
+--- !u!114 &6163057336418108329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5300110333170465053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c999a53711d40674b89b72f745b335e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rig: {fileID: 0}
 --- !u!1001 &3812421674578911840
 PrefabInstance:
   m_ObjectHideFlags: 0

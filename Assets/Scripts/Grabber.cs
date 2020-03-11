@@ -9,14 +9,14 @@ public class Grabber : MonoBehaviour
     public List<GameObject> touching = new List<GameObject>();
     public List<GameObject> holding = new List<GameObject>();
 
-    private VRInput controller;
+    private VRController controller;
     private FixedJoint joint;
 
     void Awake()
     {
         if (TryGetComponent(typeof(FixedJoint), out var c))
             joint = (FixedJoint)c;
-        controller = GetComponent<VRInput>();
+        controller = GetComponent<VRController>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -89,7 +89,7 @@ public class Grabber : MonoBehaviour
             if (joint.connectedBody == null)
                 joint.connectedBody = body;
             if (joint.connectedBody == body)
-                joint.breakForce = joint.breakTorque = controller.gripValue * controller.maxForce;
+                joint.breakForce = joint.breakTorque = controller.gripValue * controller.gripForce;
         }
     }
 }
