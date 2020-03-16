@@ -42,9 +42,9 @@ public class Grabber : MonoBehaviour
         }
         else
         {
-            if (controller.gripValue > 0.8 && touching.Except(holding).Any())
+            if (controller.gripValue >= 0.8 && touching.Except(holding).Any())
                 GrabWithParenting();
-            else if (holding.Any())
+            else if (controller.gripValue < 0.8 && holding.Any())
                 ReleaseWithParenting();
         }
     }
@@ -70,6 +70,8 @@ public class Grabber : MonoBehaviour
     {
         foreach (var obj in holding)
         {
+            if (obj.transform.parent != this.transform)
+                continue;
             obj.transform.SetParent(null);
             if (obj.GetComponent<Rigidbody>() is Rigidbody r)
             {

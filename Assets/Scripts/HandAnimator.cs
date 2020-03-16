@@ -16,6 +16,9 @@ public class HandAnimator : MonoBehaviour
     void Update()
     {
         if (controller && Anim)
-            Anim.Play("FistClosing", 0, controller.gripValue);
+            if (controller.gripValue > 0.01)
+                Anim.Play("Fist Closing", 0, controller.gripValue);
+            else
+                Anim.Play("Idle");
     }
 }
